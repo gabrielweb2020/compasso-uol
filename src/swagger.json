@@ -1,0 +1,216 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Compasso Uol Documentation",
+        "description": "This is an API Compasso Uol",
+        "version": "1.0.0",
+        "contact": {
+            "email": "gabriel.bc88@gmail.com"
+        }
+    },
+    "paths": {
+        "/cidades": {
+            "post": {
+                "tags": ["Cities"],
+                "summary": "Create City",
+                "description": "Create a new city",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                            "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "estado": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example": {
+                                    "nome": "Passo Fundo",
+                                    "estado": "RS"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Error creating new city"
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Cities"],
+                "summary": "List Cities",
+                "description": "List All Cities",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error loading cities"
+                    }
+                }
+            }
+        }, 
+        "/cidades/{name}/cidade": {
+            "get": {
+                "tags": ["Cities"],
+                "summary": "List Cities",
+                "description": "List Cities For Name",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error loading cities"
+                    }
+                }
+            }
+        },
+        "/cidades/{state}/estado": {
+            "get": {
+                "tags": ["Cities"],
+                "summary": "List Cities",
+                "description": "List Cities For State",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error loading cities"
+                    }
+                }
+            }
+        },
+        "/clientes": {
+            "post": {
+                "tags": ["Clients"],
+                "summary": "Create Client",
+                "description": "Create a new client",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                            "type": "object",
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "type": "string"
+                                    },
+                                    "nascimento": {
+                                        "type": "string"
+                                    },
+                                    "idade": {
+                                        "type": "number"
+                                    },
+                                    "cidade": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example": {
+                                    "nome": "Gabriel Bittencourt",
+                                    "sexo": "Masculino",
+                                    "nascimento": "05/02/1988",
+                                    "idade": "33",
+                                    "cidade": "Niterói"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Error creating new client"
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Clients"],
+                "summary": "List Clients",
+                "description": "List All Clients",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error loading clients"
+                    }
+                }
+            }
+        },
+        
+        "/clientes/{name}/cliente": {
+            "get": {
+                "tags": ["Clients"],
+                "summary": "List Clientes",
+                "description": "List Clients For Name",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error loading clients"
+                    }
+                }
+            }
+        },
+        "/clientes/{id}": {
+            "get": {
+                "tags": ["Clients"],
+                "summary": "List Client",
+                "description": "List One Client",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error listing client"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Clients"],
+                "summary": "Update Client",
+                "description": "Update a One Client",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error updating client"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Clients"],
+                "summary": "Delete Client",
+                "description": "Delete a One Client",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Error deleting client"
+                    }
+                }
+            }
+        }
+    }    
+}
+  
+
+
+
+
+
