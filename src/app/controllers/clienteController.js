@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
         return res.send({ clients });
     } catch (err) {
-        return res.status(400).send({ error: 'Error loading posts!' });
+        return res.status(400).send({ error: 'Error loading clients!' });
     }
 });
 

@@ -179,7 +179,7 @@
                     }
                 }
             },
-            "put": {
+            "patch": {
                 "tags": ["Clients"],
                 "summary": "Update Client",
                 "description": "Update a One Client",
